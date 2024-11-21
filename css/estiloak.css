@@ -1,53 +1,68 @@
+/* Sistema base de espaciado: Grid de 8px */
+:root {
+  --space-1: 8px;    /* Unidad básica */
+  --space-2: 16px;   /* 2x */
+  --space-3: 24px;   /* 3x */
+  --space-4: 32px;   /* 4x */
+  --space-5: 40px;   /* 5x */
+  --space-6: 48px;   /* 6x */
+  --space-7: 56px;   /* 7x */
+  --space-8: 64px;   /* 8x */
+}
+  /* Escalado de tipografía adaptable */
+  --font-size-small: clamp(14px, 4vw, 16px); /* Ejemplo para textos pequeños */
+  --font-size-medium: clamp(18px, 5vw, 24px); /* Ejemplo para textos medianos */
+  --font-size-large: clamp(32px, 16vw, 48px); /* Ejemplo para encabezados grandes */
+}
+
+/* Aplicación del sistema de espaciado */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  header {
-    background-color: #003366;
-    color: #fff;
-    padding: 20px 10%;
-    text-align: center;
-  }
-  main {
-    padding: 20px 10%;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 8px;
-  }
-  h1, h2, h3 {
-    color: #003366;
-  }
-  section {
-    margin-bottom: 20px;
-  }
-  .highlight {
-    font-weight: bold;
-    color: #003366;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  ul li {
-    margin-bottom: 5px;
-  }
-  footer {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 0.9em;
-    color: #555;
-  }
-  a {
-    color: #0066cc;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
+  font-family: 'Raleway', 'Roboto';
+  line-height: 1;
+  margin: var(--space-3); /* Margen general usando la unidad de 24px */
+  padding: var(--space-2); /* Padding general usando la unidad de 16px */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro para alta legibilidad */
+  font-size: var(--font-size-medium); /* Fuente adaptable por defecto */
+}
+
+main {
+  width: 100%;
+  max-width: 800px; /* Ancho máximo en pantallas grandes */
+  margin: 20px auto; /* Centrado horizontal */
+  padding: var(--space-3); /* Padding interno de 24px */
+}
+
+h1 {
+  font-family: 'Raleway';
+  font-size: 44px;
+  font-size: var(--font-size-large); /* Títulos */
+
+}
+
+h2, h3 {
+  font-family: 'Roboto';
+  color: #000000; /* Títulos en negro */
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+p, li {
+  font-family: 'Roboto';
+  margin-bottom: 10px; /* Espaciado entre párrafos y listas */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.9em;
+  color: #555555; /* Texto más tenue para el pie de página */
+}
